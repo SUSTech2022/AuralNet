@@ -9,9 +9,6 @@ This repository provides the dataset and demo code for **AuralNet**.
   - The data is in HDF5 format, converted from MATLAB v7.3 files.  
   - Each file contains four columns: gammatone coefficients for the left ear, right ear, cross-correlation values, and ground truth labels. For more details, please refer to our paper.
 
-## Training and Testing Data
-The training, validation, and testing datasets can be [downloaded here](link). Please place the downloaded datasets in the `./dataset` folder.
-
 ## Testing
 To test the pretrained MCT model, run the following command:
 
