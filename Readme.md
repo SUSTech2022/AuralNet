@@ -30,6 +30,6 @@ python train.py
 
 ## Additional Notes
 - Ensure that you have installed all the required dependencies before running the test or training scripts.
-- If you encounter any issues， please contact [linya.fu@outlook.com](mailto:linya.fu@outlook.com)
+- If you encounter any issues, please contact [linya.fu@outlook.com](mailto:linya.fu@outlook.com)
 
 
