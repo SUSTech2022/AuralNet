@@ -75,55 +75,73 @@ if __name__ == '__main__':
 
 
     train_matpaths = [
-        "./1src_clean_dataset/MRT05_1Source_TRAIN_clean_features_33gcc_64gtf_50ms.mat",
-        "./2src_clean_dataset/MRT05_2Source_TRAIN_clean_features_33gcc_64gtf_50ms.mat",
-        "./3src_clean_dataset/MRT05_3Source_TRAIN_clean_features_33gcc_64gtf_50ms.mat"]
+        "./dataset/AuralNet dataset/1src_clean_dataset/MRT05_1Source_TRAIN_clean_features_33gcc_64gtf_50ms.mat",
+        "./dataset/AuralNet dataset/2src_clean_dataset/MRT05_2Source_TRAIN_clean_features_33gcc_64gtf_50ms.mat",
+        "./dataset/AuralNet dataset/3src_clean_dataset/MRT05_3Source_TRAIN_clean_features_33gcc_64gtf_50ms.mat"]
     train_labelpaths = [
-        "./1src_clean_dataset/MRT05_1Source_TRAIN_clean_labels_tanh_new.mat",
-        "./2src_clean_dataset/MRT05_2Source_TRAIN_clean_labels_tanh_new.mat",
-        "./3src_clean_dataset/MRT05_3Source_TRAIN_clean_labels_tanh_new.mat"]
+        "./dataset/AuralNet dataset/1src_clean_dataset/MRT05_1Source_TRAIN_clean_labels_tanh_new.mat",
+        "./dataset/AuralNet dataset/2src_clean_dataset/MRT05_2Source_TRAIN_clean_labels_tanh_new.mat",
+        "./dataset/AuralNet dataset/3src_clean_dataset/MRT05_3Source_TRAIN_clean_labels_tanh_new.mat"]
     
     val_matpaths = [
-        "./1src_clean_dataset/MRT05_1Source_VAL_clean_features_33gcc_64gtf_50ms.mat",
-        "./2src_clean_dataset/MRT05_2Source_VAL_clean_features_33gcc_64gtf_50ms.mat",
-        "./3src_clean_dataset/MRT05_3Source_VAL_clean_features_33gcc_64gtf_50ms.mat"]
+        "./dataset/AuralNet dataset/1src_clean_dataset/MRT05_1Source_VAL_clean_features_33gcc_64gtf_50ms.mat",
+        "./dataset/AuralNet dataset/2src_clean_dataset/MRT05_2Source_VAL_clean_features_33gcc_64gtf_50ms.mat",
+        "./dataset/AuralNet dataset/3src_clean_dataset/MRT05_3Source_VAL_clean_features_33gcc_64gtf_50ms.mat"]
     val_labelpaths = [
-        "./1src_clean_dataset/MRT05_1Source_VAL_clean_labels_tanh_new.mat",
-        "./2src_clean_dataset/MRT05_2Source_VAL_clean_labels_tanh_new.mat",
-        "./3src_clean_dataset/MRT05_3Source_VAL_clean_labels_tanh_new.mat"]
+        "./dataset/AuralNet dataset/1src_clean_dataset/MRT05_1Source_VAL_clean_labels_tanh_new.mat",
+        "./dataset/AuralNet dataset/2src_clean_dataset/MRT05_2Source_VAL_clean_labels_tanh_new.mat",
+        "./dataset/AuralNet dataset/3src_clean_dataset/MRT05_3Source_VAL_clean_labels_tanh_new.mat"]
     prepare_dataset(train_matpaths,train_labelpaths,save_path=save_dir+"train_clean.h5")
-    prepare_dataset(val_matpaths,val_labelpaths,save_path=save_dir+"train_clean.h5")
+    prepare_dataset(val_matpaths,val_labelpaths,save_path=save_dir+"val_clean.h5")
 
 
-    MCT_train_matpaths = ["",
-                          "",
-                          ""]
-    MCT_train_labelpaths = ["",
-                            "",
-                            ""]
-    MCT_val_matpaths = ["",
-                        "",
-                        ""]
-    MCT_val_labelpaths = ["",
-                          "",
-                          ""]
+    MCT_train_matpaths = [
+        "./dataset/AuralNet dataset/1src_MCT_dataset/MRT05_1Source_TRAIN_MCT_features_33gcc_64gtf_50ms.mat",
+        "./dataset/AuralNet dataset/2src_MCT_dataset/MRT05_2Source_TRAIN_MCT_features_33gcc_64gtf_50ms.mat",
+        "./dataset/AuralNet dataset/3src_MCT_dataset/MRT05_3Source_TRAIN_MCT_features_33gcc_64gtf_50ms.mat"]
+    MCT_train_labelpaths = [
+        "./dataset/AuralNet dataset/1src_MCT_dataset/MRT05_1Source_TRAIN_MCT_labels_tanh_new.mat",
+        "./dataset/AuralNet dataset/2src_MCT_dataset/MRT05_2Source_TRAIN_MCT_labels_tanh_new.mat",
+        "./dataset/AuralNet dataset/3src_MCT_dataset/MRT05_3Source_TRAIN_MCT_labels_tanh_new.mat"]
+    MCT_val_matpaths = [
+        "./dataset/AuralNet dataset/1src_MCT_dataset/MRT05_1Source_VAL_MCT_features_33gcc_64gtf_50ms.mat",
+        "./dataset/AuralNet dataset/2src_MCT_dataset/MRT05_2Source_VAL_MCT_features_33gcc_64gtf_50ms.mat",
+        "./dataset/AuralNet dataset/3src_MCT_dataset/MRT05_3Source_VAL_MCT_features_33gcc_64gtf_50ms.mat"]
+    MCT_val_labelpaths = [
+        "./dataset/AuralNet dataset/1src_MCT_dataset/MRT05_1Source_VAL_MCT_labels_tanh_new.mat",
+        "./dataset/AuralNet dataset/2src_MCT_dataset/MRT05_2Source_VAL_MCT_labels_tanh_new.mat",
+        "./dataset/AuralNet dataset/3src_MCT_dataset/MRT05_3Source_VAL_MCT_labels_tanh_new.mat"]
     prepare_dataset(MCT_train_matpaths,MCT_train_labelpaths,save_path=save_dir+"MCT_train.h5")
     prepare_dataset(MCT_val_matpaths,MCT_val_labelpaths,save_path=save_dir+"MCT_val.h5")
 
 
 
-    prepare_dataset([""],[""],save_path=save_dir+"test_0db_1src.h5")
-    prepare_dataset([""],[""],save_path=save_dir+"test_10db_1src.h5")
-    prepare_dataset([""],[""],save_path=save_dir+"test_20db_1src.h5")
-    prepare_dataset([""],[""],save_path=save_dir+"test_anechoic_1src.h5")
-    prepare_dataset([""],[""],save_path=save_dir+"test_0db_2src.h5")
-    prepare_dataset([""],[""],save_path=save_dir+"test_10db_2src.h5")
-    prepare_dataset([""],[""],save_path=save_dir+"test_20db_2src.h5")
-    prepare_dataset([""],[""],save_path=save_dir+"test_anechoic_2src.h5")
-    prepare_dataset([""],[""],save_path=save_dir+"test_0db_3src.h5")
-    prepare_dataset([""],[""],save_path=save_dir+"test_10db_3src.h5")
-    prepare_dataset([""],[""],save_path=save_dir+"test_20db_3src.h5")
-    prepare_dataset([""],[""],save_path=save_dir+"test_anechoic_3src.h5")
+    prepare_dataset(["./dataset/AuralNet dataset/1src_test_0dB/MRT05_1Source_TEST_MCT_features_33gcc_64gtf_50ms.mat"],
+                    ["./dataset/AuralNet dataset/1src_test_0dB/MRT05_1Source_TEST_MCT_labels_tanh_new.mat"],save_path=save_dir+"test_0db_1src.h5")
+    prepare_dataset(["./dataset/AuralNet dataset/1src_test_10dB/MRT05_1Source_TEST_MCT_features_33gcc_64gtf_50ms.mat"],
+                    ["./dataset/AuralNet dataset/1src_test_10dB/MRT05_1Source_TEST_MCT_labels_tanh_new.mat"],save_path=save_dir+"test_10db_1src.h5")
+    prepare_dataset(["./dataset/AuralNet dataset/1src_test_20dB/MRT05_1Source_TEST_MCT_features_33gcc_64gtf_50ms.mat"],
+                    ["./dataset/AuralNet dataset/1src_test_20dB/MRT05_1Source_TEST_MCT_labels_tanh_new.mat"],save_path=save_dir+"test_20db_1src.h5")
+    prepare_dataset(["./dataset/AuralNet dataset/1src_test_infdB/MRT05_1Source_TEST_MCT_features_33gcc_64gtf_50ms.mat"],
+                    ["./dataset/AuralNet dataset/1src_test_infdB/MRT05_1Source_TEST_MCT_labels_tanh_new.mat"],save_path=save_dir+"test_anechoic_1src.h5")
+    
+    prepare_dataset(["./dataset/AuralNet dataset/2src_test_0dB/MRT05_2Source_TEST_MCT_features_33gcc_64gtf_50ms.mat"],
+                    ["./dataset/AuralNet dataset/2src_test_0dB/MRT05_2Source_TEST_MCT_labels_tanh_new.mat"],save_path=save_dir+"test_0db_2src.h5")
+    prepare_dataset(["./dataset/AuralNet dataset/2src_test_10dB/MRT05_2Source_TEST_MCT_features_33gcc_64gtf_50ms.mat"],
+                    ["./dataset/AuralNet dataset/2src_test_10dB/MRT05_2Source_TEST_MCT_labels_tanh_new.mat"],save_path=save_dir+"test_10db_2src.h5")
+    prepare_dataset(["./dataset/AuralNet dataset/2src_test_20dB/MRT05_2Source_TEST_MCT_features_33gcc_64gtf_50ms.mat"],
+                    ["./dataset/AuralNet dataset/2src_test_20dB/MRT05_2Source_TEST_MCT_labels_tanh_new.mat"],save_path=save_dir+"test_20db_2src.h5")
+    prepare_dataset(["./dataset/AuralNet dataset/2src_test_infdB/MRT05_2Source_TEST_MCT_features_33gcc_64gtf_50ms.mat"],
+                    ["./dataset/AuralNet dataset/2src_test_infdB/MRT05_2Source_TEST_MCT_labels_tanh_new.mat"],save_path=save_dir+"test_anechoic_2src.h5")
+    
+    prepare_dataset(["./dataset/AuralNet dataset/3src_test_0dB/MRT05_3Source_TEST_MCT_features_33gcc_64gtf_50ms.mat"],
+                    ["./dataset/AuralNet dataset/3src_test_0dB/MRT05_3Source_TEST_MCT_labels_tanh_new.mat"],save_path=save_dir+"test_0db_3src.h5")
+    prepare_dataset(["./dataset/AuralNet dataset/3src_test_10dB/MRT05_3Source_TEST_MCT_features_33gcc_64gtf_50ms.mat"],
+                    ["./dataset/AuralNet dataset/3src_test_10dB/MRT05_3Source_TEST_MCT_labels_tanh_new.mat"],save_path=save_dir+"test_10db_3src.h5")
+    prepare_dataset(["./dataset/AuralNet dataset/3src_test_20dB/MRT05_3Source_TEST_MCT_features_33gcc_64gtf_50ms.mat"],
+                    ["./dataset/AuralNet dataset/3src_test_20dB/MRT05_3Source_TEST_MCT_labels_tanh_new.mat"],save_path=save_dir+"test_20db_3src.h5")
+    prepare_dataset(["./dataset/AuralNet dataset/3src_test_infdB/MRT05_3Source_TEST_MCT_features_33gcc_64gtf_50ms.mat"],
+                    ["./dataset/AuralNet dataset/3src_test_infdB/MRT05_3Source_TEST_MCT_labels_tanh_new.mat"],save_path=save_dir+"test_anechoic_3src.h5")
 
 
 
